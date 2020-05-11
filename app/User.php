@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Profile;
+use App\Models\Note;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -42,6 +43,11 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    public function Note()
+    {
+        return $this->hasMany(Note::class);
     }
 
 }

@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $user = App\User::find(1);
-    
-    return $user;
+    dd($user-> toArray(1));
+    return view ('welcome');
 });
